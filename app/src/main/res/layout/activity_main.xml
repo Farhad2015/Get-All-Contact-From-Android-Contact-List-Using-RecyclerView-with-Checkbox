@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#5b74a8"
+        android:id="@+id/frag">
+
+        <TextView
+            android:id="@+id/srchHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search.."
+            android:textSize="16dp"
+            android:textColor="#000"
+            android:layout_gravity="center" />
+
+        <SearchView
+            android:background="#5b74a8"
+            android:padding="8dp"
+            android:id="@+id/searchView"
+            android:drawableLeft="@android:drawable/ic_menu_search"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:layout_gravity="right"
+            android:layout_height="wrap_content"></SearchView>
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contacts_list"/>
+
+</RelativeLayout>
